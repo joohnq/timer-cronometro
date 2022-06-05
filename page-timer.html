@@ -1,42 +1,76 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+      <!--   METAS   -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--   TITLE   -->
     <title>Timer</title>
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/timer.css">
-</head>
-<body>
+    <!--   LINKS   -->
+    <link rel="stylesheet" href="style/style.css"/>
+    <link rel="shortcut icon" href="assets/faviconTimer.ico" type="image/x-icon">
+  </head>
+  <body>
+      <!--   PAGE   -->
     <section class="container">
-        <section class="cronometro">
-            <p id="painelTimer">00:00:00</p>
-        </section>
-        <section class="inputs">
-            <label for="hours">Horas</label>
-            <input type="number" name="hoursTimer" id="hoursTimer" placeholder="Hor" min="1" max="24">
+      <section class="cronometro">
+        <p id="painelTimer">00:00:00</p>
+      </section>
+      <section class="inputs">
+        <label for="hours">Horas</label>
+        <input
+          type="number"
+          name="hoursTimer"
+          id="hoursTimer"
+          placeholder="Horas"
+          min="1"
+          max="24"
+        />
 
-            <label for="minutes">Minutos</label>
-            <input type="number" name="minutesTimer" id="minutesTimer" placeholder="Min" min="1" max="60">
+        <label for="minutes">Minutos</label>
+        <input
+          type="number"
+          name="minutesTimer"
+          id="minutesTimer"
+          placeholder="Minutos"
+          min="1"
+          max="60"
+        />
 
-            <label for="seconds">Segundos</label>
-            <input type="number" name="secondsTimer" id="secondsTimer" placeholder="Seg" min="1" max="60">
-        </section>
-        <section class="buttons">
-            <p id="message-loading"></p>
-            <button id="start" type="submit" value="Começar">Começar</button>
-            <button id="stop" type="submit" value="Parar">Parar</button>
-            <button id="restart" type="submit" value="Zerar">Zerar</button>
-          </section>
+        <label for="seconds">Segundos</label>
+        <input
+          type="number"
+          name="secondsTimer"
+          id="secondsTimer"
+          placeholder="Segundos"
+          min="1"
+          max="60"
+        />
+      </section>
+      <section class="buttons">
+        <p id="message-loading"></p>
+        <button id="start" type="submit" value="Começar">Começar</button>
+        <button id="stop" type="submit" value="Parar">Parar</button>
+        <button id="restart" type="submit" value="Zerar">Zerar</button>
+      </section>
     </section>
-    <a id="page-cronometro" target="_blank" href="page-timer.html">
-        <p>Cronômetro</p>
-        <svg width="35" height="35" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <a id="page-cronometro" target="_blank" href="page-cronometro.html">
+      <p>Cronômetro</p>
+      <svg
+        width="35"
+        height="35"
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="1.5"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <path d="m19 9-7 7-7-7"></path>
-          </svg>
+      </svg>
     </a>
-    
     <script src="js/timer.js"></script>
-</body>
+  </body>
 </html>
