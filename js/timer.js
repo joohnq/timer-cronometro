@@ -5,7 +5,6 @@ const painelTimer = document.getElementById("painelTimer");
 const btnStart = document.getElementById("start");
 const btnRestart = document.getElementById("restart");
 const btnStop = document.getElementById("stop");
-
 const inputs = document.querySelector(".inputs");
 const message = document.getElementById("message-loading");
 var counter;
