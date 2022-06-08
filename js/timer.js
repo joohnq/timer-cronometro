@@ -57,29 +57,29 @@ function startTimer() {
   let s = secondsTimer.value;
 
   const menuPoibilitiesSeconds = [
-    (s >= 60 && s < 120),
-    (s >= 120 && s < 180),
-    (s >= 180 && s < 240),
-    (s >= 240 && s < 300),
-    (s >= 300 && s < 360)
-  ]
-  
-  const menuPoibilitiesMinutes = [
-    (m >= 60 && m < 120),
-    (m >= 120 && m < 180),
-    (m >= 180 && m < 240),
-    (m >= 240 && m < 300),
-    (m >= 300 && m < 360)
-  ]
+    s >= 60 && s < 120,
+    s >= 120 && s < 180,
+    s >= 180 && s < 240,
+    s >= 240 && s < 300,
+    s >= 300 && s < 360,
+  ];
 
-  switch(menuPoibilitiesSeconds.indexOf(true)){
+  const menuPoibilitiesMinutes = [
+    m >= 60 && m < 120,
+    m >= 120 && m < 180,
+    m >= 180 && m < 240,
+    m >= 240 && m < 300,
+    m >= 300 && m < 360,
+  ];
+
+  switch (menuPoibilitiesSeconds.indexOf(true)) {
     case 0:
       s -= 60;
       m = 1;
       break;
     case 1:
       s -= 120;
-      m = 2; 
+      m = 2;
       break;
     case 2:
       s -= 180;
@@ -92,17 +92,17 @@ function startTimer() {
     case 4:
       s -= 300;
       m = 5;
-      break
+      break;
   }
 
-  switch(menuPoibilitiesMinutes.indexOf(true)){
+  switch (menuPoibilitiesMinutes.indexOf(true)) {
     case 0:
       m -= 60;
       h = 1;
       break;
     case 1:
       m -= 120;
-      h = 2; 
+      h = 2;
       break;
     case 2:
       m -= 180;
@@ -115,7 +115,7 @@ function startTimer() {
     case 4:
       m -= 300;
       h = 5;
-      break
+      break;
   }
 
   returnMessage("Start");

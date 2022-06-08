@@ -15,34 +15,25 @@
 
     <!--   PAGE   -->
   </head>
-  <body>
-    <section class="container">
-      <section class="cronometro">
-        <p id="painelCronometro">00:00:00</p>
+  <body class="flex">
+      <section class="container flex">
+        <section class="painel">
+          <p id="painelCronometro">00:00:00</p>
+        </section>
+        <section class="buttons">
+          <p id="message-loading"></p>
+          <div class="buttons-painel flex">
+            <button id="start" type="submit" value="Começar">Começar</button>
+            <button id="stop" type="submit" value="Parar">Parar</button>
+            <button id="restart" type="submit" value="Zerar">Zerar</button>
+            <button class="home-page">
+              <a class="home-page flex" href="index.html">
+                <svg viewBox="0 0 16 16" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 16 16"><path d="M15.45 7 14 5.551V2c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1v.553L9 .555C8.727.297 8.477 0 8 0s-.727.297-1 .555L.55 7C.238 7.325 0 7.562 0 8c0 .563.432 1 1 1h1v6c0 .55.45 1 1 1h3v-5c0-.55.45-1 1-1h2c.55 0 1 .45 1 1v5h3c.55 0 1-.45 1-1V9h1c.568 0 1-.437 1-1 0-.438-.238-.675-.55-1z" fill="#ffffff" class="fill-000000"></path></svg>
+              </a>
+            </button>
+          </div>
+        </section>
       </section>
-      <section class="buttons">
-        <p id="message-loading"></p>
-        <button id="start" type="submit" value="Começar">Começar</button>
-        <button id="stop" type="submit" value="Parar">Parar</button>
-        <button id="restart" type="submit" value="Zerar">Zerar</button>
-      </section>
-    </section>
-    <a id="page-timer" target="_blank" href="page-timer.html">
-      <p>Timer</p>
-      <svg
-        width="35"
-        height="35"
-        fill="none"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="1.5"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="m19 9-7 7-7-7"></path>
-      </svg>
-    </a>
     <script src="js/cronometro.js"></script>
   </body>
 </html>

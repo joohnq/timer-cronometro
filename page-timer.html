@@ -1,76 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-      <!--   METAS   -->
+    <!--   METAS   -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--   TITLE   -->
     <title>Timer</title>
     <!--   LINKS   -->
-    <link rel="stylesheet" href="style/style.css"/>
-    <link rel="shortcut icon" href="assets/faviconTimer.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style/style.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/faviconTimer.ico"
+      type="image/x-icon"
+    />
   </head>
-  <body>
-      <!--   PAGE   -->
-    <section class="container">
-      <section class="cronometro">
+  <body class="flex">
+    <!--   PAGE   -->
+    <section class="container flex">
+      <section class="painel">
         <p id="painelTimer">00:00:00</p>
       </section>
-      <section class="inputs">
-        <label for="hours">Horas</label>
-        <input
-          type="number"
-          name="hoursTimer"
-          id="hoursTimer"
-          placeholder="Horas"
-          min="1"
-          max="24"
-        />
-
-        <label for="minutes">Minutos</label>
-        <input
-          type="number"
-          name="minutesTimer"
-          id="minutesTimer"
-          placeholder="Minutos"
-          min="1"
-          max="60"
-        />
-
-        <label for="seconds">Segundos</label>
-        <input
-          type="number"
-          name="secondsTimer"
-          id="secondsTimer"
-          placeholder="Segundos"
-          min="1"
-          max="60"
-        />
-      </section>
-      <section class="buttons">
-        <p id="message-loading"></p>
-        <button id="start" type="submit" value="Começar">Começar</button>
-        <button id="stop" type="submit" value="Parar">Parar</button>
-        <button id="restart" type="submit" value="Zerar">Zerar</button>
+      <section class="controls-timer flex">
+        <section class="inputs flex">
+            <label for="hours">Horas</label>
+            <input
+              type="number"
+              name="hoursTimer"
+              id="hoursTimer"
+              placeholder="Horas"
+              min="1"
+              max="24"
+            />
+            <label for="minutes">Minutos</label>
+            <input
+              type="number"
+              name="minutesTimer"
+              id="minutesTimer"
+              placeholder="Minutos"
+              min="1"
+              max="60"
+            />
+            <label for="seconds">Segundos</label>
+            <input
+              type="number"
+              name="secondsTimer"
+              id="secondsTimer"
+              placeholder="Segundos"
+              min="1"
+              max="60"
+            />
+        </section>
+        <section class="buttons">
+            <p id="message-loading"></p>
+            <div class="buttons-painel flex">
+              <button id="start" type="submit" value="Começar">Começar</button>
+              <button id="stop" type="submit" value="Parar">Parar</button>
+              <button id="restart" type="submit" value="Zerar">Zerar</button>
+              <button class="home-page">
+                <a class="home-page flex" href="index.html">
+                  <svg viewBox="0 0 16 16" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 16 16"><path d="M15.45 7 14 5.551V2c0-.55-.45-1-1-1h-1c-.55 0-1 .45-1 1v.553L9 .555C8.727.297 8.477 0 8 0s-.727.297-1 .555L.55 7C.238 7.325 0 7.562 0 8c0 .563.432 1 1 1h1v6c0 .55.45 1 1 1h3v-5c0-.55.45-1 1-1h2c.55 0 1 .45 1 1v5h3c.55 0 1-.45 1-1V9h1c.568 0 1-.437 1-1 0-.438-.238-.675-.55-1z" fill="#ffffff" class="fill-000000"></path></svg>
+                </a>
+              </button>
+            </div>
+        </section>
       </section>
     </section>
-    <a id="page-cronometro" target="_blank" href="page-cronometro.html">
-      <p>Cronômetro</p>
-      <svg
-        width="35"
-        height="35"
-        fill="none"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="1.5"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="m19 9-7 7-7-7"></path>
-      </svg>
-    </a>
     <script src="js/timer.js"></script>
   </body>
 </html>
