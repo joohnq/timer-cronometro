@@ -1,4 +1,4 @@
-# Timer / Cronômwtro
+# Timer / Cronômetro
 
 Projeto desenvolvido para testar conhecimento em JavaScript. O projeto consiste basicamente em uma tela inicial que tem 2 botões, um cronômetro e um timer.
 
