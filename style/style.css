@@ -103,7 +103,7 @@ button:focus {
 }
 
 .title-tela-inicial {
-  font-size: 20px;
+  font-size: 24px;
   text-align: center;
   font-weight: 800;
   text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.617);
@@ -125,7 +125,8 @@ button:focus {
   border-radius: 20px;
 }
 
-.buttons-tela-inicial button {
+.button-tela-inicial{
+  text-decoration: none;
   align-items: center;
   justify-content: center;
 
@@ -139,15 +140,15 @@ button:focus {
   cursor: pointer;
 }
 
-.buttons-tela-inicial button img {
+.buttons-tela-inicial a img {
   width: 30px;
 }
 
-.buttons-tela-inicial button a {
+.buttons-tela-inicial a p {
   text-decoration: none;
   text-transform: uppercase;
 
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
 
   color: white;
@@ -226,15 +227,15 @@ input::placeholder {
     font-size: 35px;
   }
 
-  .buttons-tela-inicial{
+  .button-tela-inicial{
     width: 80%;
   }
 
-  .buttons-tela-inicial button img {
+  .buttons-tela-inicial a img {
     width: 40px;
   }
 
-  .buttons-tela-inicial button a {
+  .buttons-tela-inicial a p {
     font-size: 16px;
   }
 
@@ -270,6 +271,10 @@ input::placeholder {
   input:placeholder-shown {
     font-size: 10px;
   }
+
+  .buttons-tela-inicial a p{
+    font-size: 18px;
+  }
 }
 
 @media (min-width: 400px) {
@@ -277,11 +282,11 @@ input::placeholder {
     font-size: 50px;
   }
 
-  .buttons-tela-inicial button img {
+  .buttons-tela-inicial a img {
     width: 50px;
   }
 
-  .buttons-tela-inicial button a {
+  .buttons-tela-inicial a p {
     font-size: 24px;
   }
 
@@ -351,11 +356,11 @@ input::placeholder {
     font-size: 70px;
   }
 
-  .buttons-tela-inicial button img {
+  .buttons-tela-inicial a img {
     width: 60px;
   }
 
-  .buttons-tela-inicial button a {
+  .buttons-tela-inicial a p {
     font-size: 30px;
   }
 
