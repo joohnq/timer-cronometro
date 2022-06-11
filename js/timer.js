@@ -6,6 +6,7 @@ const btnStart = document.getElementById("start");
 const btnRestart = document.getElementById("restart");
 const btnStop = document.getElementById("stop");
 const inputs = document.querySelector(".inputs");
+const buttons = document.querySelector('.controls-timer > .buttons')
 const message = document.getElementById("message-loading");
 var counter;
 
@@ -26,6 +27,7 @@ function cleanSetupTimer() {
   minutesTimer.value = "";
   secondsTimer.value = "";
   inputs.style.display = "";
+  // buttons.style.alignItems = "center"
 }
 
 function timeOutCleanMessage() {
@@ -122,37 +124,42 @@ function startTimer() {
   inputs.style.display = "none";
   timeOutCleanMessage();
 
+  if(h == '' && m == '' && s == ''){
+    message.textContent = 'Por favor insira os valores'
+    cleanSetupTimer()
+}else{
   counter = setInterval(() => {
     function counterStartTimer() {
-      if (h == 0 && m == 0 && s == 0) {
-        clearInterval(counter);
-        cleanSetupTimer();
-        console.log("Terminei");
-      } else {
-        if (s == 0) {
-          if (m == 0) {
-            s = 59;
-            if (h == 0) {
-              m = 59;
+        if (h == 0 && m == 0 && s == 0) {
+          clearInterval(counter);
+          cleanSetupTimer();
+          console.log("Terminei");
+        } else {
+          if (s == 0) {
+            if (m == 0) {
               s = 59;
+              if (h == 0) {
+                m = 59;
+                s = 59;
+              } else {
+                h--;
+                m = 59;
+                s = 59;
+              }
             } else {
-              h--;
-              m = 59;
+              m--;
               s = 59;
             }
           } else {
-            m--;
-            s = 59;
+            s--;
           }
-        } else {
-          s--;
         }
-      }
     }
     setTimeout(counterStartTimer, 100);
 
     painelTimer.textContent = `${twoDigits(h)}:${twoDigits(m)}:${twoDigits(s)}`;
   }, 1000);
+}
 }
 
 function resumeTimer() {
@@ -200,10 +207,7 @@ function stopTimer() {
 }
 
 function restartTimer() {
-  clearInterval(counter);
-  cleanSetupTimer();
-  returnMessage("Restart");
-  timeOutCleanMessage();
+  location.reload()
 }
 
 btnStart.addEventListener("click", startTimer);
