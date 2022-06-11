@@ -13,14 +13,13 @@
 
   font-family: "Poppins", sans-serif;
 }
-.flex{
+.flex {
   display: flex;
-  align-items: center;
 }
 
-
-body{
+body {
   justify-content: center;
+  align-items: center;
   flex-direction: column;
 
   width: 100%;
@@ -34,21 +33,36 @@ label {
   display: none;
 }
 
-.container {
+.counter {
+  align-items: center;
   flex-direction: column;
 
-  margin-top: 10px;
+  margin: 10px auto;
 }
 
 .painel {
+  width: 90%;
   margin: 25px auto 0;
 }
 
-.buttons-painel{
-  flex-direction: row;
+.buttons {
+  width: 90%;
+}
+
+.buttons-painel {
+  align-items: center;
+  flex-direction: column;
   gap: 10px;
   margin-top: 20px;
   padding-bottom: 10px;
+}
+
+.controls-timer,
+.controls-cronometro {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
 }
 
 button {
@@ -58,9 +72,10 @@ button {
   color: var(--background);
 
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 800;
 
   border-radius: 10px;
+  width: 100%;
 
   cursor: pointer;
 }
@@ -69,8 +84,6 @@ button:hover,
 button:focus {
   background-color: var(--background-hover);
   color: var(--white);
-
-  transition: ease 0.5s;
 }
 
 #message-loading {
@@ -85,20 +98,27 @@ button:focus {
 }
 
 /*     TELA INICIAL     */
+#page-inicial {
+  margin: 50px auto;
+}
+
 .title-tela-inicial {
-  font-size: 70px;
+  font-size: 20px;
+  text-align: center;
   font-weight: 800;
   text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.617);
 
   color: white;
 
-  margin: 50px 0 25px 0;
+  margin-bottom: 30px;
 }
 
 .buttons-tela-inicial {
+  align-items: center;
   justify-content: center;
-  gap: 40px;
-  width: 70%;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
 
   margin: 0 auto 30px;
 
@@ -106,30 +126,28 @@ button:focus {
 }
 
 .buttons-tela-inicial button {
+  align-items: center;
   justify-content: center;
 
   padding: 10px 20px;
 
   background-color: var(--background-hover);
 
-  font-size: 20px;
-  font-weight: 500;
-
   border-radius: 10px;
-  border: none;
+  border: 0;
 
   cursor: pointer;
 }
 
 .buttons-tela-inicial button img {
-  width: 50px;
+  width: 30px;
 }
 
 .buttons-tela-inicial button a {
   text-decoration: none;
   text-transform: uppercase;
 
-  font-size: 30px;
+  font-size: 12px;
   font-weight: 600;
 
   color: white;
@@ -138,7 +156,7 @@ button:focus {
 /*    CRONOMÊTRO E TIMER    */
 #painelCronometro,
 #painelTimer {
-  font-size: max(17vw);
+  font-size: 20px;
   text-align: center;
 
   color: var(--white);
@@ -146,28 +164,31 @@ button:focus {
   border: 5px solid var(--white);
   border-radius: 10px;
 
-  padding: 10px 30px; 
+  padding: 10px;
 }
 
-.home-page{
+.home-page {
   justify-content: center;
-  padding: 7.5px 10px;
+  padding: 5px 10px;
 
   background-color: var(--background-hover);
 }
 
 .home-page svg {
-  width: 35px;
+  width: 30px;
 }
 
 /*     TIMER     */
 .inputs {
+  /* align-items: center; */
   justify-content: center;
-  gap: 10px;
+  margin-top: 20px;
+  gap: 5px;
+  width: 90%;
 }
 
 .inputs input {
-  height: 80px;
+  height: 50px;
 
   padding: 10px 0;
 
@@ -188,147 +209,274 @@ input::-webkit-inner-spin-button {
   display: none;
 }
 
-input:placeholder-shown{
+input:placeholder-shown {
   text-align: center;
-  font-size: 12px;
+  font-size: 8px;
   font-weight: 800;
 }
 
-input::placeholder{
+input::placeholder {
   color: var(--background);
-}
-
-.controls-timer{
-  justify-content: space-between;
-  flex-direction: row;
-  gap: 30px;
-  width: 100%;
 }
 
 /*     MEDIA QUERIES     */
 
-@media (max-width: 200px) {
-  body{
-    margin: 0 auto;
+@media (min-width: 200px) {
+  .title-tela-inicial {
+    font-size: 35px;
   }
-}
 
-@media (max-width: 300px) {
-  .painel{
-    margin: 20px 0 20px;
-  }
-  #painelTimer{
-    padding: 5px 10px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .inputs {
-    margin: 0 auto;
-    padding: 0;
+  .buttons-tela-inicial{
     width: 80%;
   }
 
+  .buttons-tela-inicial button img {
+    width: 40px;
+  }
+
+  .buttons-tela-inicial button a {
+    font-size: 16px;
+  }
+
+  #painelTimer,
+  #painelCronometro {
+    font-size: 30px;
+  }
+
   .inputs input {
-    height: 60px;
+    height: 65px;
+  }
+
+  input:placeholder-shown {
+    text-align: center;
+    font-size: 10px;
+    font-weight: 800;
+  }
+}
+
+@media (min-width: 300px) {
+  #painelTimer,
+  #painelCronometro {
+    font-size: 40px;
+  }
+
+  .buttons {
+    width: 80%;
+  }
+  .inputs input {
+    height: 80px;
   }
 
   input:placeholder-shown {
     font-size: 10px;
-    text-align: center;
-  }
-
-  .buttons button{
-    width: 80%;
-    margin: 0 auto;
-
-    padding: 10px 20px;
   }
 }
 
-@media (max-width: 400px) {
+@media (min-width: 400px) {
+  .title-tela-inicial {
+    font-size: 50px;
+  }
+
+  .buttons-tela-inicial button img {
+    width: 50px;
+  }
+
+  .buttons-tela-inicial button a {
+    font-size: 24px;
+  }
+
+  #painelTimer,
+  #painelCronometro {
+    font-size: 50px;
+
+    padding: 20px 30px;
+  }
+
   .buttons {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 600px) {
-  .controls-timer{
-    flex-direction: column;
-  }
-
-  .buttons-painel,
-  .buttons-home-dark{
-    width: 90%;
-    margin: 0 auto;
+    width: 70%;
   }
 }
 
 @media (min-width: 500px) {
-  button {
+  #painelTimer,
+  #painelCronometro {
+    font-size: 70px;
+
+    padding: 20px 30px;
+  }
+
+  .buttons-painel button {
     font-size: 25px;
+  }
 
-    width: 100%;
-    padding: 10px 20px;
-
-    margin: 0 auto;
+  input:placeholder-shown {
+    font-size: 12px;
   }
 }
 
-@media (max-width: 800px) {
-  .buttons-tela-inicial {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .buttons{
-    flex-direction: column;
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .buttons-painel{
-    flex-direction: column;
+@media (min-width: 600px) {
+  #page-inicial {
     width: 80%;
-    margin: 0 auto;
+  }
+  .buttons-tela-inicial {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  #painelTimer,
+  #painelCronometro {
+    font-size: 90px;
+
+    padding: 20px 30px;
+  }
+
+  .controls-timer,
+  .controls-cronometro {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .inputs {
+    width: 60%;
+    align-items: flex-start;
+  }
+
+  .buttons button {
+    width: 90%;
+  }
+}
+
+@media (min-width: 700px) {
+  .title-tela-inicial {
+    font-size: 70px;
+  }
+
+  .buttons-tela-inicial button img {
+    width: 60px;
+  }
+
+  .buttons-tela-inicial button a {
+    font-size: 30px;
+  }
+
+  #painelTimer,
+  #painelCronometro {
+    font-size: 110px;
+
+    padding: 20px 30px;
+  }
+
+  .buttons button {
+    width: 80%;
   }
 }
 
 @media (min-width: 800px) {
-  button {
+  .inputs {
+    width: 40%;
+  }
+
+  .buttons-painel {
+    flex-direction: row;
+    width: 90%;
+  }
+
+  .buttons-painel button {
+    padding: 10px 20px;
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 900px) {
+  #painelTimer,
+  #painelCronometro {
+    font-size: 130px;
+
+    padding: 20px 30px;
+  }
+
+  .inputs {
+    width: 50%;
+  }
+
+  .inputs input {
+    width: 90px;
+    height: 90px;
+  }
+
+  input:placeholder-shown {
+    font-size: 14px;
+  }
+
+  .buttons-painel button {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 1000px) {
+  #painelTimer,
+  #painelCronometro {
+    font-size: 150px;
+
+    padding: 20px 30px;
+  }
+
+  .inputs {
+    width: 50%;
+  }
+
+  .inputs input {
+    width: 100px;
+    height: 100px;
+  }
+
+  input:placeholder-shown {
+    font-size: 16px;
+  }
+
+  .controls-timer,
+  .controls-cronometro {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1200px) {
+  #painelTimer,
+  #painelCronometro {
+    font-size: 200px;
+
+    padding: 20px 30px;
+  }
+
+  .buttons button {
+    padding: 15px 20px;
+  }
+}
+
+@media (min-width: 1500px) {
+  #painelTimer,
+  #painelCronometro {
+    font-size: 30vh;
+
+    padding: 20px 30px;
+  }
+
+  .buttons button {
+    padding: 20px 20px;
     font-size: 30px;
   }
 }
 
-@media (max-width: 1000px) {
-  .buttons-tela-inicial {
-    width: 70%;
-  }
-}
+@media (min-width: 1920px) {
+  #painelTimer,
+  #painelCronometro {
+    font-size: 30vh;
 
-@media (max-width: 1200px) {
-  .buttons-tela-inicial {
-    width: 70%;
+    padding: 20px 30px;
   }
 
-  .painel{
-    margin: 20px 0 20px;
-  }
-
-  .inputs{
-    padding-top: 0;
-  }
-}
-
-
-
-
-
-
-
-
-@media (max-height: 500px) {
-  .title-tela-inicial {
-    margin: 20px 0 25px 0;
+  .buttons button {
+    padding: 25px 20px;
   }
 }
 
